@@ -33,8 +33,16 @@ const ccLady = {
   enjoy: false,
 };
 
+const vaiwilso={
+  id: 4,
+  songName: "Here Comes The Sun",
+  file: "vaiwilson",
+  artist: "Beatles",
+  enjoy: false,
+}
+
 let isPlaying = false;
-const playlist = [qMentira, comeAsYouAre, ccLady];
+const playlist = [qMentira, comeAsYouAre, ccLady,vaiwilso];
 let index = 0;
 
 function playSong() {
@@ -108,9 +116,9 @@ function updateprogressbar() {
 }
 
 function jumpTo(event) {
-  const widht = cntrProgress.clientWidth;
+  const width = cntrProgress.clientWidth;
   const clickPos = event.offsetX;
-  const jumpToTime = (clickPos / widht) * song.duration;
+  const jumpToTime = (clickPos / width) * song.duration;
   song.currentTime = jumpToTime;
 }
 
